@@ -12,15 +12,13 @@ class Building
     @units << unit
   end
 
-  def add_renter(renter)
-    @units.each do |renter|
-      @renters << renter.name
-    end
-  end
-#  all_players = []
-    # @teams.each do |team|
-    #   all_players << team.position
-    # end
+  # def add_renter(renter)
+  #   #/
+  #   @units.each do |renter|
+  #     @renters << renter.name
+  #   end
+  # end
+
   def average_rent
     1099.5
   end

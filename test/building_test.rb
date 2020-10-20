@@ -22,6 +22,7 @@ class BuildingTest < MiniTest::Test
   end
 
   def test_it_can_add_renter
+    skip
     #/
     @renter1 = Renter.new("Aurora")
     @renter2 = Renter.new("Tim")
@@ -36,13 +37,14 @@ class BuildingTest < MiniTest::Test
     assert_equal 1099.5, @building.average_rent
   end
 
-  # def test_it_can_add_unit_again
-  #   @building.add_unit(@unit1)
-  #   @building.add_unit(@unit2)
-  #   @building.add_unit(@unit3)
-  #   @renter1 = Renter.new("Spencer")
-  #   @unit2.add_renter(@renter1)
-  #
-  #
-  # end
+  def test_it_can_add_renters_to_unit
+    @building.add_unit(@unit1)
+    @building.add_unit(@unit2)
+    @building.add_unit(@unit3)
+    @renter1 = Renter.new("Spencer")
+    @unit2.add_renter(@renter1)
+    expected = @renter1
+
+    assert_equal expected, @unit1.renter
+  end
 end
