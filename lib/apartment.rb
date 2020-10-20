@@ -3,15 +3,13 @@ class Apartment
               :monthly_rent,
               :bathrooms,
               :bedrooms,
-              :hash,
               :renter
   def initialize(hash)
     @number = hash[:number]
     @monthly_rent = hash[:monthly_rent]
     @bathrooms = hash[:bathrooms]
     @bedrooms = hash[:bedrooms]
-    @hash = hash
-    @renter = renter
+    # @renter = nil
   end
 
   def add_renter(person)

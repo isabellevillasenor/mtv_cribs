@@ -4,7 +4,7 @@ class Building
               :rented_units
   def initialize
     @units = []
-    @renters = []
+    # @renters = []
     @rented_units = []
   end
 
@@ -12,9 +12,11 @@ class Building
     @units << unit
   end
 
-  # def add_renter(renter)
-  #     @renters << renter
-  # end
+  def renters
+    @renters = self.units.map do |unit|
+        unit.renter.name
+      end
+  end
 
   def average_rent
     1099.5
