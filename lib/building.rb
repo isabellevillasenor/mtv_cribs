@@ -13,10 +13,7 @@ class Building
   end
 
   # def add_renter(renter)
-  #   #/
-  #   @units.each do |renter|
-  #     @renters << renter.name
-  #   end
+  #     @renters << renter
   # end
 
   def average_rent

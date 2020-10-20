@@ -23,7 +23,6 @@ class BuildingTest < MiniTest::Test
 
   def test_it_can_add_renter
     skip
-    #/
     @renter1 = Renter.new("Aurora")
     @renter2 = Renter.new("Tim")
     @unit1.add_renter(@renter1)
